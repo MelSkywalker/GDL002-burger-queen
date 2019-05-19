@@ -1,0 +1,88 @@
+[
+    {
+        "time": "Desayuno",
+        "price": "5",
+        "name": "Café americano"
+    },
+    {
+        "time": "Desayuno",
+        "price": "7",
+        "name": "Café con leche"
+    },
+    {
+        "time": "Desayuno",
+        "price": "10",
+        "name": "Sandwich de jamón y queso"
+    },
+    {
+        "time": "Desayuno",
+        "price": "7",
+        "name": "Jugo de frutas natural"
+    },
+    {
+        "time": "Comida",
+        "type": "Hamburguesas",
+        "price": "10",
+        "name": "Hamburguesa simple",
+        "content": [
+            "Res",
+            "Pollo",
+            "Vegetariana"
+        ],
+        "extra": [
+            "Queso",
+            "Huevo"
+        ]
+    },
+    {
+        "time": "Comida",
+        "type": "Hamburguesas",
+        "price": "15",
+        "name": "Hamburguesa doble",
+        "content": [
+            "Res",
+            "Pollo",
+            "Vegetariana"
+        ],
+        "extra": [
+            "Queso",
+            "Huevo"
+        ]
+    },
+    {
+        "time": "Comida",
+        "type": "Acompañamientos",
+        "price": "5",
+        "name": "Papas fritas"
+    },
+    {
+        "time": "Comida",
+        "type": "Acompañamientos",
+        "price": "5",
+        "name": "Aros de cebolla"
+    },
+    {
+        "time": "Comida",
+        "type": "Para tomar",
+        "price": "5",
+        "name": "Agua 500ml"
+    },
+    {
+        "time": "Comida",
+        "type": "Para tomar",
+        "price": "7",
+        "name": "Agua 750ml"
+    },
+    {
+        "time": "Comida",
+        "type": "Para tomar",
+        "price": "7",
+        "name": "Bebida/gaseosa 500ml"
+    },
+    {
+        "time": "Comida",
+        "type": "Para tomar",
+        "price": "10",
+        "name": "Bebida/gaseosa 750ml"
+    }
+  ]
