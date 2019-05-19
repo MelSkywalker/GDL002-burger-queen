@@ -5,7 +5,9 @@ const Navigation = () => {
     return (
         <div>
             <NavLink to='/'>Home</NavLink>
-            <NavLink to='/kitchen'>Kitchen</NavLink>
+            <NavLink to='/waiter'>Mesero</NavLink>
+            <NavLink to='/kitchen'>Cocina</NavLink>
+            <NavLink to='/food'>Food</NavLink>
         </div>
     );
 };
