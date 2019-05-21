@@ -3,6 +3,12 @@ import Products from '../data/products.json';
 import Item from './Item';
 
 export class Menu extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            
+        }
+    }
     render() {
         //const {menu} = this.props;
         return (
