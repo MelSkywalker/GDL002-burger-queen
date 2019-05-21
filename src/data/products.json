@@ -2,28 +2,33 @@
     {
         "time": "Desayuno",
         "price": "5",
-        "name": "Café americano"
+        "name": "Café americano",
+        "key": "desayuno_01"
     },
     {
         "time": "Desayuno",
         "price": "7",
-        "name": "Café con leche"
+        "name": "Café con leche",
+        "key": "desayuno_02"
     },
     {
         "time": "Desayuno",
         "price": "10",
-        "name": "Sandwich de jamón y queso"
+        "name": "Sandwich de jamón y queso",
+        "key": "desayuno_03"
     },
     {
         "time": "Desayuno",
         "price": "7",
-        "name": "Jugo de frutas natural"
+        "name": "Jugo de frutas natural",
+        "key": "desayuno_04"
     },
     {
         "time": "Comida",
         "type": "Hamburguesas",
         "price": "10",
         "name": "Hamburguesa simple",
+        "key": "comida_01",
         "content": [
             "Res",
             "Pollo",
@@ -39,6 +44,7 @@
         "type": "Hamburguesas",
         "price": "15",
         "name": "Hamburguesa doble",
+        "key": "comida_02",
         "content": [
             "Res",
             "Pollo",
@@ -53,36 +59,42 @@
         "time": "Comida",
         "type": "Acompañamientos",
         "price": "5",
-        "name": "Papas fritas"
+        "name": "Papas fritas",
+        "key": "comida_03"
     },
     {
         "time": "Comida",
         "type": "Acompañamientos",
         "price": "5",
-        "name": "Aros de cebolla"
+        "name": "Aros de cebolla",
+        "key": "comida_04"
     },
     {
         "time": "Comida",
         "type": "Para tomar",
         "price": "5",
-        "name": "Agua 500ml"
+        "name": "Agua 500ml",
+        "key": "comida_05"
     },
     {
         "time": "Comida",
         "type": "Para tomar",
         "price": "7",
-        "name": "Agua 750ml"
+        "name": "Agua 750ml",
+        "key": "comida_06"
     },
     {
         "time": "Comida",
         "type": "Para tomar",
         "price": "7",
-        "name": "Bebida/gaseosa 500ml"
+        "name": "Bebida/gaseosa 500ml",
+        "key": "comida_07"
     },
     {
         "time": "Comida",
         "type": "Para tomar",
         "price": "10",
-        "name": "Bebida/gaseosa 750ml"
+        "name": "Bebida/gaseosa 750ml",
+        "key": "comida_08"
     }
   ]

@@ -1,7 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import Menu from '../components/Menu';
+import MenuList from '../components/MenuList';
+import Order from '../components/Order';
 
-class Waiter extends React.Component {
+export class Food extends React.Component {
     render() {
         return (
             <div>
@@ -12,40 +14,57 @@ class Waiter extends React.Component {
     }
 };
 
-class Menu extends React.Component {
-    render() {
-        return (
-            <div>Menu
-                <Time />
-            </div>
-        );
-    }
-};
 
-class Time extends React.Component {
+// export class Menu extends React.Component {
+//     render() {
+//         return (
+//             <div>Menu
+//                 <Time />
+//             </div>
+//         );
+//     }
+// };
+
+export class Time extends React.Component {
     render() {
         return (
             <div>
                 <p>Desayuno - Comida</p>
-                <Product />
             </div>
         );
     }
 };
 
-class Product extends React.Component {
-    render() {
-        return (
-            <div>
-                <p>Hamburguesas - Acompañamientos - Para tomar</p>
-                <Type />
-                <Extra />
-            </div>
-        );
-    }
-};
+// export class ProductList extends React.Component {
+//     render() {
+//         return (
+//             <div>
+//                 <h1>Productos: </h1>
+//                 {Products.map((item) => {
+//                     return (
+//                         <Product foodItem={item} />
+//                     )
+//                 })}
+//                 <Type />
+//                 <Extra />
+//             </div>
+//         );
+//     }
+// };
 
-class Type extends React.Component {
+//  export class Product extends React.Component {
+//     render() {
+//         const productItem = this.props;
+//         return (
+//             <div>
+//                 <p>{product.name}</p>
+//                 <p>${product.price}.00</p>
+//             </div>
+//         )
+//     }
+// }
+
+export class Type extends React.Component {
     render() {
         return (
             <p>Res - Pollo - Vegetariana</p>
@@ -53,7 +72,7 @@ class Type extends React.Component {
     }
 };
 
-class Extra extends React.Component {
+export class Extra extends React.Component {
     render() {
         return (
             <p>Queso - Huevo</p>
@@ -61,19 +80,18 @@ class Extra extends React.Component {
     }
 };
 
-class Order extends React.Component {
-    render() {
-        return (
-            <div>
-                <Product />
-                <Total />
-                <SendButton />
-            </div>
-        );
-    }
-};
+// export class Order extends React.Component {
+//     render() {
+//         return (
+//             <div>
+//                 <Total />
+//                 <SendButton />
+//             </div>
+//         );
+//     }
+// };
 
-class Total extends React.Component {
+export class Total extends React.Component {
     render() {
         return (
             <div>
@@ -83,10 +101,12 @@ class Total extends React.Component {
     }
 };
 
-class SendButton extends React.Component {
+export class SendButton extends React.Component {
     render() {
         return (
             <button>Enviar a cocina</button>
         );
     }
 };
+
+export default Food;
