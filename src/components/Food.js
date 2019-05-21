@@ -7,7 +7,7 @@ export class Food extends React.Component {
     render() {
         return (
             <div>
-                <Menu />
+                <MenuList />
                 <Order />
             </div>
         );
