@@ -1,6 +1,7 @@
 import React from 'react';
+import OrderRow from './OrderRow';
 
-export class Order extends React.Component {
+export default class Order extends React.Component {
     render() {
         return (
             <div>
@@ -24,20 +25,7 @@ export class Order extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>2</td>
-                            <td>Hamburguesa</td>
-                            <td>$5.00</td>
-                            <td>$10.00</td>
-                            <td><button>Eliminar</button></td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Agua 500</td>
-                            <td>$2.00</td>
-                            <td>$2.00</td>
-                            <td><button>Eliminar</button></td>
-                        </tr>
+                        <OrderRow ordersArray={this.props.ordersArray} />
                     </tbody>
                     <tfoot>
                         <tr>
@@ -50,5 +38,3 @@ export class Order extends React.Component {
         )
     }
 }
-
-export default Order;

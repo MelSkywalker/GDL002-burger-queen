@@ -2,15 +2,8 @@ import React from 'react';
 import Products from '../data/products.json';
 import Item from './Item';
 
-export class Menu extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            
-        }
-    }
+export default class Menu extends React.Component {
     render() {
-        //const {menu} = this.props;
         return (
             <div>
                 <h1>{this.props.name}</h1>
@@ -19,7 +12,7 @@ export class Menu extends React.Component {
                         return item.time === this.props.name
                     })
                     .map((item) => {
-                        return <Item item={item} key={item.key} />
+                        return <Item item={item} key={item.key} {...this.props}/>
                     })
                     }
                 </div>
@@ -27,5 +20,3 @@ export class Menu extends React.Component {
         )
     }
 };
-
-export default Menu;

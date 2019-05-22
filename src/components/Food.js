@@ -1,14 +1,25 @@
 import React from 'react';
-import Menu from '../components/Menu';
 import MenuList from '../components/MenuList';
 import Order from '../components/Order';
 
 export class Food extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            orders: []
+        }
+    }
+    setOrders = (order) => {
+        this.setState({
+            //orders: this.state.orders.push(order),
+            orders: [...this.state.orders, order],
+        }, () => console.log(this.state));
+    }
     render() {
         return (
             <div>
-                <MenuList />
-                <Order />
+                <MenuList setOrders={this.setOrders} />
+                <Order ordersArray={this.state.orders}/>
             </div>
         );
     }
