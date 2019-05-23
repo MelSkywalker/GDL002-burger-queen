@@ -3,25 +3,49 @@
         "time": "Desayuno",
         "price": "5",
         "name": "Café americano",
-        "key": "desayuno_01"
+        "key": "desayuno_01",
+        "content": [
+            "-"
+        ],
+        "extra": [
+            "-"
+        ]
     },
     {
         "time": "Desayuno",
         "price": "7",
         "name": "Café con leche",
-        "key": "desayuno_02"
+        "key": "desayuno_02",
+        "content": [
+            "-"
+        ],
+        "extra": [
+            "-"
+        ]
     },
     {
         "time": "Desayuno",
         "price": "10",
         "name": "Sandwich de jamón y queso",
-        "key": "desayuno_03"
+        "key": "desayuno_03",
+        "content": [
+            "-"
+        ],
+        "extra": [
+            "-"
+        ]
     },
     {
         "time": "Desayuno",
         "price": "7",
         "name": "Jugo de frutas natural",
-        "key": "desayuno_04"
+        "key": "desayuno_04",
+        "content": [
+            "-"
+        ],
+        "extra": [
+            "-"
+        ]
     },
     {
         "time": "Comida",
@@ -35,6 +59,7 @@
             "Vegetariana"
         ],
         "extra": [
+            "-",
             "Queso",
             "Huevo"
         ]
@@ -51,6 +76,7 @@
             "Vegetariana"
         ],
         "extra": [
+            "-",
             "Queso",
             "Huevo"
         ]
@@ -60,41 +86,77 @@
         "type": "Acompañamientos",
         "price": "5",
         "name": "Papas fritas",
-        "key": "comida_03"
+        "key": "comida_03",
+        "content": [
+            "-"
+        ],
+        "extra": [
+            "-"
+        ]
     },
     {
         "time": "Comida",
         "type": "Acompañamientos",
         "price": "5",
         "name": "Aros de cebolla",
-        "key": "comida_04"
+        "key": "comida_04",
+        "content": [
+            "-"
+        ],
+        "extra": [
+            "-"
+        ]
     },
     {
         "time": "Comida",
         "type": "Para tomar",
         "price": "5",
         "name": "Agua 500ml",
-        "key": "comida_05"
+        "key": "comida_05",
+        "content": [
+            "-"
+        ],
+        "extra": [
+            "-"
+        ]
     },
     {
         "time": "Comida",
         "type": "Para tomar",
         "price": "7",
         "name": "Agua 750ml",
-        "key": "comida_06"
+        "key": "comida_06",
+        "content": [
+            "-"
+        ],
+        "extra": [
+            "-"
+        ]
     },
     {
         "time": "Comida",
         "type": "Para tomar",
         "price": "7",
         "name": "Bebida/gaseosa 500ml",
-        "key": "comida_07"
+        "key": "comida_07",
+        "content": [
+            "-"
+        ],
+        "extra": [
+            "-"
+        ]
     },
     {
         "time": "Comida",
         "type": "Para tomar",
         "price": "10",
         "name": "Bebida/gaseosa 750ml",
-        "key": "comida_08"
+        "key": "comida_08",
+        "content": [
+            "-"
+        ],
+        "extra": [
+            "-"
+        ]
     }
   ]
