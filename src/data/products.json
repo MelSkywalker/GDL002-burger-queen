@@ -5,10 +5,8 @@
         "name": "Café americano",
         "key": "desayuno_01",
         "content": [
-            "-"
         ],
         "extra": [
-            "-"
         ]
     },
     {
@@ -17,10 +15,8 @@
         "name": "Café con leche",
         "key": "desayuno_02",
         "content": [
-            "-"
         ],
         "extra": [
-            "-"
         ]
     },
     {
@@ -29,10 +25,8 @@
         "name": "Sandwich de jamón y queso",
         "key": "desayuno_03",
         "content": [
-            "-"
         ],
         "extra": [
-            "-"
         ]
     },
     {
@@ -41,10 +35,8 @@
         "name": "Jugo de frutas natural",
         "key": "desayuno_04",
         "content": [
-            "-"
         ],
         "extra": [
-            "-"
         ]
     },
     {
@@ -59,7 +51,6 @@
             "Vegetariana"
         ],
         "extra": [
-            "-",
             "Queso",
             "Huevo"
         ]
@@ -76,7 +67,6 @@
             "Vegetariana"
         ],
         "extra": [
-            "-",
             "Queso",
             "Huevo"
         ]
@@ -88,10 +78,8 @@
         "name": "Papas fritas",
         "key": "comida_03",
         "content": [
-            "-"
         ],
         "extra": [
-            "-"
         ]
     },
     {
@@ -101,10 +89,8 @@
         "name": "Aros de cebolla",
         "key": "comida_04",
         "content": [
-            "-"
         ],
         "extra": [
-            "-"
         ]
     },
     {
@@ -114,10 +100,8 @@
         "name": "Agua 500ml",
         "key": "comida_05",
         "content": [
-            "-"
         ],
         "extra": [
-            "-"
         ]
     },
     {
@@ -127,10 +111,8 @@
         "name": "Agua 750ml",
         "key": "comida_06",
         "content": [
-            "-"
         ],
         "extra": [
-            "-"
         ]
     },
     {
@@ -140,10 +122,8 @@
         "name": "Bebida/gaseosa 500ml",
         "key": "comida_07",
         "content": [
-            "-"
         ],
         "extra": [
-            "-"
         ]
     },
     {
@@ -153,10 +133,8 @@
         "name": "Bebida/gaseosa 750ml",
         "key": "comida_08",
         "content": [
-            "-"
         ],
         "extra": [
-            "-"
         ]
     }
   ]

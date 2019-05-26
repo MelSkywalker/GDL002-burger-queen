@@ -6,18 +6,35 @@ export default class Order extends React.Component {
         super(props);
         this.state = {
             sum: 0,
-            selectedOption: null
+            selectedOption: []
         }
     }
 
+    //Al seleccionar los extras de una segunda o tercera hamburguesa, se resta, necesito separar el "lenght" del array (del estado?) de cada producto
     componentDidUpdate = (prevProps, prevState) => {
         const { ordersArray } = this.props;
         const { sum } = this.state;
         if (prevProps.ordersArray.length !== ordersArray.length) {
-            this.setState({
-                // sum: paserInt(this.state.sum, 10) + parseInt(this.props.ordersArray[this.props.ordersArray.length - 1].price, 10),
-                sum: +sum + +ordersArray[ordersArray.length - 1].price,
-            }, () => console.log(this.props, this.state))
+            if(prevProps.ordersArray.length < ordersArray.length) {
+                this.setState({
+                    sum: +sum + +ordersArray[ordersArray.length -1].price,
+                }, () => console.log(this.props, this.state, 'prevProps: ', prevProps))
+            } else if(prevProps.ordersArray.length > ordersArray.length) {
+                this.setState({
+                    sum: +sum - +ordersArray[ordersArray.length -1].price,
+                }, () => console.log(this.props, this.state, 'prevProps: ', prevProps))
+            }
+        }
+        if(prevState.selectedOption.length !== this.state.selectedOption.length) {
+            if(prevState.selectedOption.length < this.state.selectedOption.length) {
+                this.setState({
+                    sum: +sum + 1,
+                }, () => console.log(this.props, this.state, 'prevState: ', prevState))
+            } else if (prevState.selectedOption.length > this.state.selectedOption.length) {
+                this.setState({
+                    sum: +sum - 1,
+                }, () => console.log(this.props, this.state, 'prevState: ', prevState))
+            }
         }
     }
 
