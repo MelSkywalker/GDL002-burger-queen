@@ -9,7 +9,7 @@ export class Food extends React.Component {
         super(props);
         this.state = {
             orders: [],
-            contentValue: null,
+            contentValue: 'Res',
             extrasValue: null,
             orderNotes: '',
             table: '1',
@@ -27,7 +27,7 @@ export class Food extends React.Component {
         const db = firebase.firestore();
         const userRef = db.collection('orders').add({
             product: this.state.orders[0].name,
-            content: this.state.contentValue, //si no es hamburguesa = null
+            content: this.state.orders[0].type === 'Hamburguesas' ? this.state.contentValue : null,
             extras: this.state.extrasValue > 0 ? this.state.extrasValue.map((extra) => extra.label) : this.state.extrasValue,
             notes: this.state.orderNotes,
             table: this.state.table,
