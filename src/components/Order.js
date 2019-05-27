@@ -6,7 +6,7 @@ export default class Order extends React.Component {
         super(props);
         this.state = {
             sum: 0,
-            selectedOption: []
+            selectedOption: [],
         }
     }
 
