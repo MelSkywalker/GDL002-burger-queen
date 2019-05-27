@@ -1,5 +1,6 @@
-import firebase from 'firebase';
-//import 'firebase/firebase-firestore'
+import firebase from 'firebase/app';
+import 'firebase/firebase-firestore';
+
 var config = {
     apiKey: "AIzaSyAKPkYLaegcUjtbMuwJsSVp0SUqqHq5mmQ",
     authDomain: "burger-queen-1eb9a.firebaseapp.com",

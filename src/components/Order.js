@@ -14,6 +14,7 @@ export default class Order extends React.Component {
     componentDidUpdate = (prevProps, prevState) => {
         const { ordersArray } = this.props;
         const { sum } = this.state;
+        const { selectedOption } = this.state;
         if (prevProps.ordersArray.length !== ordersArray.length) {
             if(prevProps.ordersArray.length < ordersArray.length) {
                 this.setState({
@@ -50,7 +51,7 @@ export default class Order extends React.Component {
                 <h1>Pedido:</h1>
                 <form>
                     <label>Mesa: </label>
-                    <select>
+                    <select onChange={this.props.numTable}>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -68,7 +69,12 @@ export default class Order extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
-                        <OrderRow ordersArray={this.props.ordersArray} extrasValue={this.props.extrasValue} selectedOption={this.state.selectedOption} contentValue={this.props.contentValue}/>
+                        <OrderRow
+                            handleExtra={this.props.handleExtra}
+                            ordersArray={this.props.ordersArray}
+                            extrasValue={this.props.extrasValue}
+                            selectedOption={this.state.selectedOption}
+                            contentValue={this.props.contentValue}/>
                     </tbody>
                     <tfoot>
                         <tr>

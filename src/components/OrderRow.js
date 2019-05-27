@@ -11,7 +11,7 @@ export default class OrderRow extends React.Component {
                     <tr key={order.name + '_' + i}>
                         <td>{order.name}</td>
                         <td>
-                            <select onChange={this.props.contentValue}>
+                            <select onFocus={this.props.contentValue}>
                                 {order.content.map((flavor, i) => {
                                     return <option key={flavor + '_' + i}>{flavor}</option>
                                 })}

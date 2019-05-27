@@ -1,59 +1,38 @@
 import React from 'react';
 import firebase from './firebase';
-import { tsConstructorType } from '@babel/types';
+// import { tsConstructorType } from '@babel/types';
+import OrderItems from './OrderItems';
 
 
 export default class Kitchen extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            fullname: '',
-            email: ''
+            orders: {},
         }
     }
-    
-    updateInput = (e) => {
-        this.setState({
-            [e.target.name]: e.target.value,
+
+    getOrders = (e) => {
+        const ref = firebase.firestore().ref('orders');
+        ref.on('value', snapshot => {
+            const state = snapshot.val();
+            this.state(state);
         });
+        console.log('DATA RETRIEVED');
     }
 
-    addUser = (e) => {
-        e.preventDefault();
-        const db = firebase.firestore();
-        const userRef = db.collection('users').add({
-            fullname: this.state.fullname,
-            email: this.state.email
-        })
-        this.setState({
-            fullname: '',
-            email: ''
-        });
+    componentDidMount = () => {
+        this.getOrders();
     }
+
     render(){
+        const { orders } = this.state;
         return (
             <div>
                 <h1>Kitchen</h1>
-                <form onSubmit= { this.addUser }>
-                    <input
-                        type="text"
-                        name="fullname"
-                        placeholder="Full name"
-                        onChange={ this.updateInput }
-                        value= { this.state.fullname }
-                     />
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Email"
-                        onChange={ this.updateInput }
-                        value= { this.state.email }
-                    />
-                <button type="submit">Submit</button>
-                </form>
+                <OrderItems />
             </div>
         );
     }
-    
 };
 
