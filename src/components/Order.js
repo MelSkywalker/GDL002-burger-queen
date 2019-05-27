@@ -6,7 +6,7 @@ export default class Order extends React.Component {
         super(props);
         this.state = {
             sum: 0,
-            selectedOption: []
+            selectedOption: [],
         }
     }
 
@@ -38,11 +38,11 @@ export default class Order extends React.Component {
         }
     }
 
-    handleExtra = (selectedOption) => {
-        this.setState({
-            selectedOption: selectedOption,
-        }, ()=>console.log('option selected:', selectedOption))
-    }
+    // handleExtra = (selectedOption) => {
+    //     this.setState({
+    //         selectedOption: selectedOption,
+    //     }, ()=>console.log('option selected:', selectedOption))
+    // }
 
     render() {
         return (
@@ -56,6 +56,7 @@ export default class Order extends React.Component {
                         <option>3</option>
                     </select>
                 </form>
+                <form  onSubmit={this.props.sendOrder}>
                 <table>
                     <thead>
                         <tr>
@@ -67,22 +68,26 @@ export default class Order extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
-                        <OrderRow ordersArray={this.props.ordersArray} handleExtra={this.handleExtra} selectedOption={this.state.selectedOption}/* selectIngredient={this.selectIngredient} */ />
+                        <OrderRow ordersArray={this.props.ordersArray} extrasValue={this.props.extrasValue} selectedOption={this.state.selectedOption} contentValue={this.props.contentValue}/>
                     </tbody>
                     <tfoot>
                         <tr>
                             <th>Notas: </th>
                             <td colSpan='5'>
-                                <input type='text'></input>
+                                <input type='text' onChange={this.props.orderNotes}></input>
                             </td>
                         </tr>
                         <tr>
                             <th colSpan='3' >Total:</th>
                             <td>${this.state.sum}.00</td>
+                            <td>
+                                <button>Ordenar</button>
+                            </td>
                         </tr>
                     </tfoot>
                 </table>
+                </form>
             </div>
         )
     }
-}
+};
