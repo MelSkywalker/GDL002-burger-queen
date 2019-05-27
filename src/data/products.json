@@ -136,5 +136,15 @@
         ],
         "extra": [
         ]
+    },
+    {
+        "type": "Extras",
+        "name": "Queso",
+        "price": "1"
+    },
+    {
+        "type": "Extras",
+        "name": "Huevo",
+        "price": "1"
     }
   ]
