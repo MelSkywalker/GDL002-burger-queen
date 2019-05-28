@@ -6,44 +6,24 @@ export default class Order extends React.Component {
         super(props);
         this.state = {
             sum: 0,
-            selectedOption: [],
+            // selectedOption: [],
         }
     }
 
-    //Al seleccionar los extras de una segunda o tercera hamburguesa, se resta, necesito separar el "lenght" del array (del estado?) de cada producto
     componentDidUpdate = (prevProps, prevState) => {
         const { ordersArray } = this.props;
         const { sum } = this.state;
-        const { selectedOption } = this.state;
         if (prevProps.ordersArray.length !== ordersArray.length) {
-            if(prevProps.ordersArray.length < ordersArray.length) {
                 this.setState({
                     sum: +sum + +ordersArray[ordersArray.length -1].price,
-                }, () => console.log(this.props, this.state, 'prevProps: ', prevProps))
-            } else if(prevProps.ordersArray.length > ordersArray.length) {
-                this.setState({
-                    sum: +sum - +ordersArray[ordersArray.length -1].price,
-                }, () => console.log(this.props, this.state, 'prevProps: ', prevProps))
-            }
-        }
-        if(prevState.selectedOption.length !== this.state.selectedOption.length) {
-            if(prevState.selectedOption.length < this.state.selectedOption.length) {
-                this.setState({
-                    sum: +sum + 1,
-                }, () => console.log(this.props, this.state, 'prevState: ', prevState))
-            } else if (prevState.selectedOption.length > this.state.selectedOption.length) {
-                this.setState({
-                    sum: +sum - 1,
-                }, () => console.log(this.props, this.state, 'prevState: ', prevState))
-            }
+            })
         }
     }
 
-    // handleExtra = (selectedOption) => {
-    //     this.setState({
-    //         selectedOption: selectedOption,
-    //     }, ()=>console.log('option selected:', selectedOption))
-    // }
+    addExtras = (e) => {
+        console.log('addExtras= ', e, e.length, e.label);
+        return e.length;
+    }
 
     render() {
         return (
@@ -70,10 +50,11 @@ export default class Order extends React.Component {
                     </thead>
                     <tbody>
                         <OrderRow
-                            handleExtra={this.props.handleExtra}
+                            addExtras={this.addExtras}
+                            // handleExtra={this.props.handleExtra}
                             ordersArray={this.props.ordersArray}
                             extrasValue={this.props.extrasValue}
-                            selectedOption={this.state.selectedOption}
+                            // selectedOption={this.state.selectedOption}
                             contentValue={this.props.contentValue}/>
                     </tbody>
                     <tfoot>

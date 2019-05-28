@@ -3,8 +3,14 @@ import Select from 'react-select';
 // import { tsConstructorType } from '@babel/types';
 
 export default class OrderRow extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            extrasSum: 0,
+        }
+    }
+
     render() {
-        // const { selectedOption } = this.props.selectedOption;
         return (
             this.props.ordersArray.map((order, i) => {
                 return (
@@ -18,16 +24,16 @@ export default class OrderRow extends React.Component {
                             </select>
                         </td>
                         <td>
-                            <Select onChange={this.props.extrasValue}
-                                // value={selectedOption}
-                                //onChange={this.props.handleExtra}
+                            <Select
+                                onChange={this.addExtras}
                                 options={
                                     order.extra.map((ingredient, i) => {
                                         return { label: ingredient, value: i }
                                     })
-                                } isMulti />
+                                }
+                                isMulti />
                         </td>
-                        <td>${order.price}.00</td>
+                        <td>${order.price}.00</td> {/*Asignarle un id o valor para sumarlo*/}
                         <td><button>Eliminar</button></td>
                     </tr>
                 )

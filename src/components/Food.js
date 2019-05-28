@@ -65,7 +65,7 @@ export class Food extends React.Component {
             <div>
                 <MenuList setOrders={this.setOrders} />
                 <Order
-                    handleExtras={this.handleExtras}
+                    // handleExtras={this.handleExtras}
                     ordersArray={this.state.orders}
                     sendOrder={this.sendOrder}
                     contentValue={this.handleContentChange}
