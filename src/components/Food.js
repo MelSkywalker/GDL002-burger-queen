@@ -26,28 +26,15 @@ export class Food extends React.Component {
         e.preventDefault();
         const db = firebase.firestore();
         const userRef = db.collection('orders').add({
-            product: this.state.orders[0].name,
+            order: this.state.orders.map( (order) => order.name +' extras + contenido')
+            /* product: this.state.orders[0].name,
             content: this.state.orders[0].type === 'Hamburguesas' ? this.state.contentValue : null,
             extras: this.state.extrasValue > 0 ? this.state.extrasValue.map((extra) => extra.label) : this.state.extrasValue,
             notes: this.state.orderNotes,
-            table: this.state.table,
+            table: this.state.table, */
         })
         console.log('sendOrder');
     }
-    handleContentChange = (e) => {
-        this.setState({
-            contentValue: e.target.value
-        });
-        console.log(this.state.contentValue);
-    }
-
-    handleExtras = (e) => {
-        this.setState({
-            extrasValue: e
-        });
-        console.log(this.state.extrasValue);
-    }
-
     handleNotes = (e) => {
         this.setState({
             orderNotes: e.target.value
@@ -65,11 +52,8 @@ export class Food extends React.Component {
             <div>
                 <MenuList setOrders={this.setOrders} />
                 <Order
-                    // handleExtras={this.handleExtras}
                     ordersArray={this.state.orders}
                     sendOrder={this.sendOrder}
-                    contentValue={this.handleContentChange}
-                    extrasValue={this.handleExtras}
                     orderNotes={this.handleNotes}
                     numTable={this.handleNumTable}
                 />
@@ -77,14 +61,5 @@ export class Food extends React.Component {
         );
     }
 };
-
-
-// export class SendButton extends React.Component {
-//     render() {
-//         return (
-//             <button>Enviar a cocina</button>
-//         );
-//     }
-// };
 
 export default Food;

@@ -5,8 +5,8 @@ export default class Order extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            sub: [],
             sum: 0,
-            // selectedOption: [],
         }
     }
 
@@ -18,11 +18,6 @@ export default class Order extends React.Component {
                     sum: +sum + +ordersArray[ordersArray.length -1].price,
             })
         }
-    }
-
-    addExtras = (e) => {
-        console.log('addExtras= ', e, e.length, e.label);
-        return e.length;
     }
 
     render() {
@@ -50,12 +45,7 @@ export default class Order extends React.Component {
                     </thead>
                     <tbody>
                         <OrderRow
-                            addExtras={this.addExtras}
-                            // handleExtra={this.props.handleExtra}
-                            ordersArray={this.props.ordersArray}
-                            extrasValue={this.props.extrasValue}
-                            // selectedOption={this.state.selectedOption}
-                            contentValue={this.props.contentValue}/>
+                            ordersArray={this.props.ordersArray}/>
                     </tbody>
                     <tfoot>
                         <tr>

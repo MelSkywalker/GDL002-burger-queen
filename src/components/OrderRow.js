@@ -6,8 +6,14 @@ export default class OrderRow extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            extrasSum: 0,
+            extrasPrice: 0,
         }
+    }
+    
+    addExtras = (e) => {
+        this.setState({
+            extrasPrice: e.length,
+        });
     }
 
     render() {
@@ -17,7 +23,7 @@ export default class OrderRow extends React.Component {
                     <tr key={order.name + '_' + i}>
                         <td>{order.name}</td>
                         <td>
-                            <select onFocus={this.props.contentValue}>
+                            <select >
                                 {order.content.map((flavor, i) => {
                                     return <option key={flavor + '_' + i}>{flavor}</option>
                                 })}
@@ -33,7 +39,7 @@ export default class OrderRow extends React.Component {
                                 }
                                 isMulti />
                         </td>
-                        <td>${order.price}.00</td> {/*Asignarle un id o valor para sumarlo*/}
+                        <td>${+order.price + +this.state.extrasPrice}.00</td>
                         <td><button>Eliminar</button></td>
                     </tr>
                 )
